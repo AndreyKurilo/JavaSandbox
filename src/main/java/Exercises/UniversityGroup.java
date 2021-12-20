@@ -1,6 +1,8 @@
+package Exercises;
+
+import Model.Person;
+
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class UniversityGroup {
@@ -32,12 +34,12 @@ public class UniversityGroup {
 
   public void exclude(String excludedStudent, String excludedStudent1) {
     List<String> studentsCopy = new ArrayList<>(students);
-    for (String student : studentsCopy) {
+    /*for (String student : studentsCopy) { //так тоже работает
       if (student.equals(excludedStudent1)) {
         students.remove(student);
       }
-    }
-    students.removeIf(x->x.equals(excludedStudent));
+    }*/
+    students.removeIf(x->(x.equals(excludedStudent) || x.equals(excludedStudent1)));
     /*for (int i = 0; i < students.size(); i++) {
       if (students.get(i).equals(excludedStudent1)) {
         students.remove(i);
@@ -50,7 +52,12 @@ public class UniversityGroup {
     UniversityGroup universityGroup = new UniversityGroup();
     //universityGroup.exclude("Виталий Правдивый");
     //universityGroup.excludeLoop("Виталий Правдивый");
+    System.out.println();
+    System.out.println("Initial list:");
+    universityGroup.students.forEach(System.out::println);
     universityGroup.exclude("Виталий Правдивый", "Наталия Андрющенко");
+    System.out.println();
+    System.out.println("Final list:");
     universityGroup.students.forEach(System.out::println);
   }
 

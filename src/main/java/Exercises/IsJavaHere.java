@@ -1,3 +1,5 @@
+package Exercises;
+
 public class IsJavaHere {
 
   public static void main(String[] args) {

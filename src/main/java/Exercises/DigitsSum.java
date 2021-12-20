@@ -1,3 +1,5 @@
+package Exercises;
+
 import java.util.Scanner;
 
 //Number's digits sum using array
