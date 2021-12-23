@@ -4,7 +4,7 @@ public class Program {
 
   Input input = new Input();
 
-  public void Start() {
+  public void start() {
     String name = input.getName();
     String surname = input.getSurname();
     int birthYear = input.getBirthYear();
