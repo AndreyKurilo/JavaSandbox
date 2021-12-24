@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class Input {
 
   private final Scanner scanStartCell;
-  private int verticalCoordinate;
-  private int horizontalCoordinate;
 
   public Input() {
     scanStartCell = new Scanner(System.in);}
