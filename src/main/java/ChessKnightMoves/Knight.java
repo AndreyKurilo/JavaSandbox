@@ -91,7 +91,6 @@ public class Knight {
   public void move() {
     ChessTable chessTable = new ChessTable();
 
-
     for (int i = 0; i < 64; i++) {
       chessTable.changeCellsAfterMove(xCoordinate, yCoordinate);
       System.out.println();
@@ -205,6 +204,7 @@ public class Knight {
         }
       }
     }
+    if (nextX != xCoordinate && nextY != yCoordinate)
     System.out.println("Next move to " + chessTable.getX(nextX) + chessTable.getY(nextY));
   }
 }
